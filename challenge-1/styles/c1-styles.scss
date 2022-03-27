@@ -15,6 +15,7 @@ $subtext: hsl(222, 8%, 75%);
 @media (max-width: 640px) {
     body {
         background-color: #e5eef3;
+        padding: 2rem;
     }
 
     .card {
@@ -23,7 +24,7 @@ $subtext: hsl(222, 8%, 75%);
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         max-width: 400px;
-        min-width: 300px;
+        min-width: 350px;
         max-height: 900px;
         margin: auto;
         font-family: 'Karla';
@@ -98,14 +99,15 @@ $subtext: hsl(222, 8%, 75%);
 
     .s2__signup {
         text-decoration: none;
-        // padding: 1rem 4rem;
         width: 100%;
         color: $main-text;
         background-color: $accent;
         box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
-        border-radius: .5rem;
-        margin: auto;
-        align-self: center;
+        border-radius: .3rem;
+        margin: 1.5rem auto;
+        text-align: center;
+        padding: .8rem 0;
+        display: inline-block;
     }
 
     .s3 {
@@ -145,6 +147,7 @@ $subtext: hsl(222, 8%, 75%);
         grid-template-rows: 45% 55%;
         grid-template-columns: 1fr 1fr;
         max-width: 660px;
+        max-height: 700px;
         height: 500px;
         margin: auto;
         box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
@@ -160,8 +163,9 @@ $subtext: hsl(222, 8%, 75%);
     }
     
     .s1__title {
+        font-size: 1.5rem;
         width: 100%;
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
         margin: 0;
         color: $title;
     }
@@ -191,7 +195,8 @@ $subtext: hsl(222, 8%, 75%);
     .s2__title {
         color: $main-text;
         margin: 0;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
     }
     
     .s2__price {
@@ -202,7 +207,7 @@ $subtext: hsl(222, 8%, 75%);
     }
     
     .s2__amount {
-        font-size: 35px;
+        font-size: 2rem;
         color: $main-text;
     }
     
@@ -220,15 +225,15 @@ $subtext: hsl(222, 8%, 75%);
     
     .s2__signup {
         text-decoration: none;
-        // padding: 1rem 4rem;
         width: 100%;
         color: $main-text;
         background-color: $accent;
         box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
         border-radius: .3rem;
-        margin: auto;
-        align-self: center;
-        padding: .8rem 6rem;
+        margin: 1.5rem auto;
+        text-align: center;
+        display: inline-block;
+        padding: .8rem 0;
     }
     
     .s3 {
@@ -246,7 +251,7 @@ $subtext: hsl(222, 8%, 75%);
     .s3__title {
         color: $main-text;
         padding-bottom: 1rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .s3__info {
