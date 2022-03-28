@@ -34,20 +34,18 @@ $subtext: hsla(0, 0%, 100%, 0.75);
     .s1 {
         background-blend-mode: multiply;
         background-color: $accent;
-        background-image: url(/vmlyr--fe-challenges/challenge-2/images/image-header-mobile.jpg);
+        background-image: url(/challenge-2/images/image-header-mobile.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: .5rem .5rem 0 0;
         grid-row: 1 / 1;
         height: 100%;
-        // width: 100%;
     }
     
     .s2 {
         grid-row: 2 / 2;
         font-family: 'Inter';
-        // height: 100%;
         padding: 2rem;
         text-align: center;
     }
@@ -121,7 +119,7 @@ $subtext: hsla(0, 0%, 100%, 0.75);
     .s1 {
         background-blend-mode: multiply;
         background-color: $accent;
-        background-image: url(/vmlyr--fe-challenges/challenge-2/images/image-header-desktop.jpg);
+        background-image: url(/challenge-2/images/image-header-desktop.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
