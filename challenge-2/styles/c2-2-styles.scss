@@ -34,7 +34,7 @@ $subtext: hsla(0, 0%, 100%, 0.75);
     .s1 {
         background-blend-mode: multiply;
         background-color: $accent;
-        background-image: url(/challenge-2/images/image-header-mobile.jpg);
+        background-image: url(../images/image-header-mobile.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -90,6 +90,7 @@ $subtext: hsla(0, 0%, 100%, 0.75);
         font-size: .75rem;
         font-weight: 100;
         margin-left: 0;
+        text-transform: uppercase;
     }
     
     .s2__stat-2:not(:last-child) {
@@ -119,7 +120,7 @@ $subtext: hsla(0, 0%, 100%, 0.75);
     .s1 {
         background-blend-mode: multiply;
         background-color: $accent;
-        background-image: url(/challenge-2/images/image-header-desktop.jpg);
+        background-image: url(../images/image-header-desktop.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -181,6 +182,7 @@ $subtext: hsla(0, 0%, 100%, 0.75);
         font-weight: 100;
         grid-row-start: 2;
         margin-left: 0;
+        text-transform: uppercase;
     }
 }
 
