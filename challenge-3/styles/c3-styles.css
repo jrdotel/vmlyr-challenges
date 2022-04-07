@@ -99,10 +99,36 @@ body {
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    height: 500px;
   }
 
   .card {
-    width: 400px;
+    height: fit-content;
+  }
+
+  .s1 {
+    grid-column: 1/span 2;
+    grid-row: 1;
+  }
+
+  .s2 {
+    grid-column: 3/span 1;
+    grid-row: 1;
+  }
+
+  .s3 {
+    grid-column: 1/span 1;
+    grid-row: 2;
+  }
+
+  .s4 {
+    grid-column: 2/span 2;
+    grid-row: 2;
+  }
+
+  .s5 {
+    grid-column: 4/span 1;
+    grid-row: 1/span 2;
   }
 }
 
