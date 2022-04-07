@@ -1,15 +1,23 @@
 @import url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
+body {
+  background-color: #edf2f8;
+  align-content: center;
+  padding: 4rem 1rem;
 }
 
-.s1 .s2 .s3 .s4 .s5 {
-  grid-column: 1/1;
-  gap: 2rem 0;
-  width: 300px;
-  height: 300px;
+.container {
+  margin: auto;
+}
+
+.card {
+  border-radius: 0.5rem;
+  height: fit-content;
+  padding: 2rem;
+  color: #faffff;
+}
+
+.dark-text {
+  color: #444b55;
 }
 
 .s1 {
@@ -20,23 +28,54 @@
   background-color: #49556b;
 }
 
-.s3 {
-  background-color: #ffffff;
-}
-
 .s4 {
   background-color: #18202d;
 }
 
-.s1 {
+.s3, .s5 {
   background-color: #ffffff;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.profile {
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: hotpink;
+}
+
+.name, .subtitle {
+  flex-direction: column;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    gap: 2rem 0;
+  }
+
+  .card {
+    width: 400px;
+  }
+}
 @media (min-width: 640px) {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card {
+    width: 400px;
   }
 }
 
