@@ -12,6 +12,7 @@ $light-text: #faffff;
 body {
     align-content: center;
     background-color: #edf2f8;
+    min-height: 100vh;
     padding: 4rem 1rem;
 }
 
@@ -23,7 +24,6 @@ body {
 .card {
     border-radius: .5rem;
     color: $light-text;
-    height: fit-content;
     padding: 2.5rem;
 }
 
@@ -45,6 +45,12 @@ body {
     background-color: #ffffff;
 }
 
+.quote-svg {
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 20%;
+}
+
 .header {
     align-items: center;
     display: flex;
@@ -64,20 +70,20 @@ body {
 }
 
 .name {
-    font-size: 1.2rem;
+    font-size: 90%;
     font-weight: 400;
     margin-bottom: .2rem;
 }
 
 .status {
-    font-size: 1rem;
+    font-size: 100%;
     font-weight: 300;
     margin-left: 0;
     opacity: .5;
 }
 
 .quote-1 {
-    font-size: 1.7rem;
+    font-size: 125%;
     font-weight: 600;
     margin: 1rem 0;
 }
@@ -95,6 +101,7 @@ body {
         flex-direction: column;
         gap: 2rem 0;
         max-width: 500px;
+        padding: 0 3rem;
     }
 
     .card {
@@ -104,16 +111,33 @@ body {
 
 @media (min-width: 640px) {
     .container {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        height: 500px;
+        max-height: 60vh;
+        padding: 3rem 12rem;
         
     }
 
     .card {
-        height: fit-content;
+        // max-height: 100%;
+        // max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-height: 60vh;
+        padding: 3rem 12rem;
+        
+    }
+
+    .card {
+        max-height: 100%;
     }
 
     .s1 {
