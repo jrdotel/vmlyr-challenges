@@ -1,29 +1,30 @@
 //Fonts
-@import url('https://fonts.google.com/specimen/Barlow+Semi+Condensed');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;600&display=swap');
 
 
 //Variables
 $accent: #a775f0;
-$light-text: #faffff;
 $dark-text: #444b55;
+$light-text: #faffff;
 
 
 //Styles
 body {
-    background-color: #edf2f8;
     align-content: center;
+    background-color: #edf2f8;
     padding: 4rem 1rem;
 }
 
 .container {
+    font-family: 'Barlow Semi Condensed', sans-serif;
     margin: auto;
 }
 
 .card {
     border-radius: .5rem;
-    height: fit-content;
-    padding: 2rem;
     color: $light-text;
+    height: fit-content;
+    padding: 2.5rem;
 }
 
 .dark-text {
@@ -45,43 +46,68 @@ body {
 }
 
 .header {
-    display: flex;
     align-items: center;
-    gap: 0;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .profile {
-    border-radius: 50%;
-    border-width: 2px;
     border-color: hotpink;
+    border-radius: 50%;
+    border-width: 8px;
+    width: 40px;
 }
 
-.name, .subtitle {
-    flex-direction: column;
+.title {
     margin: 0;
+    text-align: left;
 }
 
+.name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .2rem;
+}
+
+.status {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 0;
+    opacity: .5;
+}
+
+.quote-1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.quote-2 {
+    font-weight: 400;
+    line-height: 1.5rem;
+    opacity: .5;
+}
 
 @media (max-width: 640px) {
     .container {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        max-width: 500px;
         gap: 2rem 0;
+        max-width: 500px;
     }
 
     .card {
-        width: 400px;
+        min-width: 300px;
     }
 }
 
 @media (min-width: 640px) {
     .container {
         display: grid;
+        gap: 2rem;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 2rem;
         
     }
 
