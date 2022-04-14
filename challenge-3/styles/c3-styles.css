@@ -13,6 +13,7 @@ body {
 
 .card {
   border-radius: 0.5rem;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
   color: #faffff;
   padding: 2.5rem;
 }
@@ -50,10 +51,12 @@ body {
 }
 
 .profile {
-  border-color: hotpink;
   border-radius: 50%;
-  border-width: 8px;
   width: 40px;
+}
+
+.profile-highlight {
+  border: 2px solid #a775f0;
 }
 
 .title {
@@ -90,14 +93,14 @@ body {
   .container {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 2rem 0;
-    max-width: 500px;
     padding: 0 3rem;
   }
 
   .card {
-    min-width: 300px;
+    min-width: 250px;
+    max-width: 400px;
   }
 }
 @media (min-width: 1200px) {
@@ -107,7 +110,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     max-height: 60vh;
-    padding: 3rem 12rem;
+    max-width: 90vw;
   }
 
   .card {
