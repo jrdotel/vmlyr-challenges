@@ -13,7 +13,7 @@ body {
     align-content: center;
     background-color: #edf2f8;
     min-height: 100vh;
-    padding: 4rem 1rem;
+    padding: 6rem 4rem;
 }
 
 .container {
@@ -101,16 +101,13 @@ body {
     .container {
         align-items: center;
         display: flex;
-        // flex-direction: column;
         flex-wrap: wrap;
         gap: 2rem 0;
-        // max-width: 600px;
-        padding: 0 3rem;
+        max-width: 800px;
     }
 
     .card {
         min-width: 250px;
-        max-width: 400px;
     }
 }
 
@@ -120,9 +117,7 @@ body {
         gap: 2rem;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        max-height: 60vh;
         max-width: 90vw;
-        // padding: 3rem 12rem;
         
     }
 
