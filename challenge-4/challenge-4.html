@@ -4,58 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="c#-styles.css">
+    <link rel="stylesheet" href="styles/c4-styles.css">
     <title>Challenge 4</title>
 </head>
 <body>
     <article>
-        <header>
+        <div class="hero">
             <nav>
-                <h3 class="header__nav-title">Huddle</h3>
-                <a href="#" class="header__nav-button">Try It Free</a>
+                <a href="#"><img src="images/logo-2.png" class="hero__nav-logo"></a>
+                <a href="#" class="hero__nav-button">Try It Free</a>
             </nav>
-            <h1 class="header__title">Build The Community Your Fans Will Love</h1>
-            <p class="header__info">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
-            <a href="#" class="header__cta button">Get Started For Free</a>
-            <img src="images/illustration-mockups.svg" aria-hidden="true">
-        </header>
+            <header>
+                <div class="header__g1">
+                    <h1 class="header__title">Build The Community Your Fans Will Love</h1>
+                    <p class="header__info">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
+                    <a href="#" class="header__cta button">Get Started For Free</a>
+                </div>
+                <img src="images/illustration-mockups.svg" aria-hidden="true" class="header__image">
+            </header>
+        </div>
         <section class="info">
             <ul class="info__list">
-                <li class="info--list-item-1">
-                    <img src="images/illustration-grow-together.svg" alt="" class="info__list-item-img">
-                    <h2 class="info__list-item-title">Grow Together</h2>
-                    <p class="info__list-item-text">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+                <li class="info__list card card__desktop-1">
+                    <img src="images/illustration-grow-together.svg" aria-hidden="true" class="info__list-img">
+                    <div class="card__info">
+                        <h2 class="info__list-title">Grow Together</h2>
+                        <p class="info__list-text">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+                    </div>
                 </li>
-                <li class="info__list-item-2">
-                    <img src="images/illustration-flowing-conversation.svg" alt="" class="info__list-item-img">
-                    <h2 class="info__list-item-title">Flowing Conversations</h2>
-                    <p class="info__list-item-text">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+                <li class="info__list card card__desktop-2">
+                    <img src="images/illustration-flowing-conversation.svg" aria-hidden="true" class="info__list-img">
+                    <div class="card__info">
+                        <h2 class="info__list-title">Flowing Conversations</h2>
+                        <p class="info__list-text">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+                    </div>
                 </li>
-                <li class="info__list-item-3">
-                    <img src="images/illustration-your-users.svg" alt="" class="info__list-item-img">
-                    <h2 class="info__list-item-title">Your Users</h2>
-                    <p class="info__list-item-text">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately</p>
+                <li class="info__list card card__desktop-1">
+                    <img src="images/illustration-your-users.svg" aria-hidden="true" class="info__list-img">
+                    <div class="card__info">
+                        <h2 class="info__list-title">Your Users</h2>
+                        <p class="info__list-text">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately</p>
+                    </div>
                 </li>
             </ul>
         </section>
-        <div class="cta">
+        <div class="cta card">
             <h2 class="cta__title">Ready To Build Your Community?</h2>
             <a href="#" class="cta__button button">Get Started For Free</a>
         </div>
         <footer class="contact">
-            <h3 class="footer__title">Huddle</h3>
-            <p class="footer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p class="footer__call">+1-543-123-4567</p>
-            <p class="footer__email">example@huddle.com</p>
-            <ul class="footer__nav-links">
-                <li class="footer__nav-link-1"><a href="#" class="link-1">About Us</a></li>
-                <li class="footer__nav-link-2"><a href="#" class="link-2">What We Do</a></li>
-                <li class="footer__nav-link-3"><a href="#" class="link-3">FAQ</a></li>
-                <li class="footer__nav-link-4"><a href="#" class="link-4">Career</a></li>
-                <li class="footer__nav-link-5"><a href="#" class="link-5">Blog</a></li>
-                <li class="footer__nav-link-6"><a href="#" class="link-6">Contact Us</a></li>
+            <a href="#"><img src="images/logo-white.png" class="footer__logo" alt="Huddle Logo"></a>
+            <dl class="footer__contact">
+                <dt><img src="images/icon-location.svg" alt=""></dt>
+                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</dd>
+                <dt><img src="images/icon-phone.svg" alt=""></dt>
+                <dd>+1-543-123-4567</dd>
+                <dt><img src="images/icon-email.svg" alt=""></dt>
+                <dd>example@huddle.com</dd>
+            </dl>
+            <ul class="footer__nav-links list">
+                <li class="footer__nav-link"><a href="#" class="link-1">About Us</a></li>
+                <li class="footer__nav-link"><a href="#" class="link-2">What We Do</a></li>
+                <li class="footer__nav-link"><a href="#" class="link-3">FAQ</a></li>
+                <li class="footer__nav-link"><a href="#" class="link-4">Career</a></li>
+                <li class="footer__nav-link"><a href="#" class="link-5">Blog</a></li>
+                <li class="footer__nav-link"><a href="#" class="link-6">Contact Us</a></li>
             </ul>
-            <ul class="footer__social">
+            <ul class="footer__social list">
                 <li class="social-facebook">
                     <a href="#" class="facebook"><img src="" alt="facebook"></a>
                 </li>

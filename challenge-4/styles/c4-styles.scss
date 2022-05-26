@@ -1,23 +1,232 @@
 //Fonts
-@import url('');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
 
 
 //Variables
-// $accent: ;
-// $card-background: ;
+$accent: #fe52c0;
+$footer-background: #00252e;
 // $main-background: ;
-// $main-text: ;
-// $stats-subtext: ;
+$main-text: black;
+$secondary-text: white;
 // $subtext: ;
 
 
 //Styles
-
-
-@media (max-width: 640px) {
-    
+* {
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width: 640px) {
+.hero {
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    padding: 2rem;
+}
+
+.hero__nav-logo {
+    height: 20px;
+}
+
+.hero__nav-button {
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+    color: $main-text;
+    display: block;
+    padding: .5rem 2rem;
+    text-decoration: none;
+}
+
+.hero__nav-button:hover {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+header {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    text-align: center;
+}
+
+.header__title {
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.header__image {
+    margin: auto;
+    width: 90%;
+}
+
+.button {
+    background-color: $accent;
+    border-radius: 2rem;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+    color: white;
+    display: block;
+    margin: 0 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #f89cd6;
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+.card {
+    border-radius: 2rem;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem;
+    padding: 2rem 4rem;
+    text-align: center;
+}
+
+.info__list .card:hover {
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+}
+
+.info__list-text {
+    opacity: 50%;
+}
+
+.info__list-img {
+    margin: auto;
+    width: 80%;
+}
+
+.cta {
+    font-family: 'Poppins';
+    padding: 3rem 1rem;
+}
+
+footer {
+    background-color: $footer-background;
+    color: $secondary-text;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    padding: 8rem 1rem 2rem 1rem;
+    text-align: left;
+}
+
+.footer__logo {
+    width: 200px;
+}
+
+.footer__contact {
+    align-items: flex-start;
+    display: grid;
+    gap: 2rem 1rem;
+    grid-template-columns: 5% 90%;
+    margin-bottom: 2rem;
+}
+
+.footer__nav-links {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.footer__nav-links a {
+    color: $secondary-text;
+    text-decoration: none;
+}
+
+.footer__social {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: auto;
+}
+
+.footer__copy {
+    margin: auto;
+}
+
+// @media (max-width: 640px) {
+// }
+
+@media (min-width: 640px) {
+    .hero {
+        background-image: url(../images/bg-hero-desktop.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header {
+        grid-template-columns: 40% 60%;
+        align-items: center;
+    }
+
+    .header__g1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .header__g1 .button {
+        margin-right: auto;
+    }
+
+    .card__desktop-1 {
+        display: grid;
+        margin-left: auto;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr;
+        
+    }
+    
+    .card__desktop-1 img {
+        grid-column: 2/2;
+    }
+    
+    .card__desktop-2 {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-right: auto;
+        
+        img {
+            grid-column: 1/1;
+        }
+    }
+
+    .info__list-img {
+        margin: auto;
+        width: 30%;
+    }
+
+    .cta {
+        max-width: 800px;
+        margin: auto;
+        padding: 3rem;
+
+        .button {
+            max-width: 500px;
+            margin: auto;
+        }
+    }
 }
