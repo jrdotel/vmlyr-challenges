@@ -6,6 +6,8 @@
 }
 
 .hero {
+  background-blend-mode: multiply;
+  background-color: rgba(173, 216, 230, 0.3);
   background-image: url(../images/bg-hero-mobile.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -34,17 +36,18 @@ nav {
   text-decoration: none;
 }
 
-.hero__nav-button:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease-in-out;
-}
-
 header {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  margin: 2rem;
+  padding: 4rem;
   text-align: center;
+}
+
+.header__g1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .header__title {
@@ -53,8 +56,7 @@ header {
 }
 
 .header__image {
-  margin: auto;
-  width: 90%;
+  max-width: 70%;
 }
 
 .button {
@@ -62,33 +64,33 @@ header {
   border-radius: 2rem;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
   color: white;
-  display: block;
   margin: 0 2rem;
   padding: 1rem 2rem;
   text-align: center;
   text-decoration: none;
 }
 
-.button:hover {
-  background-color: #f89cd6;
-  transform: scale(1.1);
-  transition: 0.2s ease-in-out;
-}
-
 .card {
-  border-radius: 2rem;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  margin: 2rem 1rem;
   padding: 2rem 4rem;
   text-align: center;
 }
 
-.info__list .card:hover {
-  transform: scale(1.05);
-  transition: 0.2s ease-in-out;
+.info {
+  margin: 8rem 2rem;
+}
+
+.info__list {
+  margin: 4rem 0;
+}
+
+.info__list .card {
+  padding: 8rem 6rem;
 }
 
 .info__list-text {
@@ -102,15 +104,18 @@ header {
 
 .cta {
   font-family: "Poppins";
+  margin: 2rem;
   padding: 3rem 1rem;
+  position: relative;
 }
 
 footer {
-  background-color: #00252e;
+  background-color: #003745;
   color: white;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
+  margin-top: -80px;
   padding: 8rem 1rem 2rem 1rem;
   text-align: left;
 }
@@ -152,23 +157,34 @@ footer {
   margin: auto;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 1044px) {
+  .hero__nav-button, .button {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hero__nav-button:active, .button:active {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
+    transform: translateY(4px);
+    opacity: 90%;
+  }
+}
+@media (min-width: 1044px) {
   .hero {
     background-image: url(../images/bg-hero-desktop.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 2rem;
   }
 
   header {
-    grid-template-columns: 40% 60%;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .header__g1 {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
     text-align: left;
   }
 
@@ -176,29 +192,25 @@ footer {
     margin-right: auto;
   }
 
-  .card__desktop-1 {
-    display: grid;
-    margin-left: auto;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 1fr;
+  .info__list .card {
+    align-items: center;
   }
 
+  .card__desktop-1 {
+    margin-left: auto;
+    grid-template-columns: 60% 40%;
+  }
   .card__desktop-1 img {
-    grid-column: 2/2;
+    order: 2;
   }
 
   .card__desktop-2 {
-    display: grid;
     grid-template-columns: 40% 60%;
     margin-right: auto;
   }
-  .card__desktop-2 img {
-    grid-column: 1/1;
-  }
 
   .info__list-img {
-    margin: auto;
-    width: 30%;
+    width: 80%;
   }
 
   .cta {
@@ -209,6 +221,27 @@ footer {
   .cta .button {
     max-width: 500px;
     margin: auto;
+  }
+
+  .hero__nav-button, .button, .info__list .card {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hero__nav-button:active, .button:active {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
+    transform: translateY(10px);
+    opacity: 90%;
+  }
+
+  .hero__nav-button:hover, .button:hover {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
+    opacity: 90%;
+    transform: scale(1.1);
+  }
+
+  .info__list .card:hover {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.31);
+    transform: scale(1.02);
   }
 }
 
