@@ -115,7 +115,7 @@ footer {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  margin-top: -80px;
+  margin-top: -100px;
   padding: 8rem 1rem 2rem 1rem;
   text-align: left;
 }
@@ -166,6 +166,10 @@ footer {
     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
     transform: translateY(4px);
     opacity: 90%;
+  }
+
+  footer {
+    padding: 8rem 2rem 2rem;
   }
 }
 @media (min-width: 1044px) {
@@ -223,7 +227,7 @@ footer {
     margin: auto;
   }
 
-  .hero__nav-button, .button, .info__list .card {
+  .hero__nav-button, .button {
     transition: all 0.2s ease-in-out;
   }
 
@@ -239,9 +243,16 @@ footer {
     transform: scale(1.1);
   }
 
-  .info__list .card:hover {
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.31);
-    transform: scale(1.02);
+  .info__list .card {
+    margin: 4rem 8rem;
+  }
+
+  footer {
+    padding: 16rem 8rem 4rem;
+  }
+
+  .footer__nav-link:hover {
+    text-decoration: underline;
   }
 }
 
