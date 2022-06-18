@@ -62,6 +62,38 @@ main {
   width: 70px;
 }
 
+.accent__dice {
+  transition: all 0.2s ease-in-out;
+}
+
+.accent__dice:active {
+  opacity: 80%;
+  transform: scale(0.8);
+  transition: 0.4s;
+  animation-name: spin;
+  animation-duration: 200ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.accent__alert {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #53ffac;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  color: #202632;
+  font-weight: 800;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media (max-width: 640px) {
   .component {
     margin: 0 1rem;
@@ -71,6 +103,10 @@ main {
 @media (min-width: 640px) {
   .component {
     min-width: 500px;
+  }
+
+  .accent__dice:hover {
+    transform: scale(1.2);
   }
 }
 
