@@ -5,45 +5,36 @@ body {
 }
 
 .card {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #1b1938;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 30% 70%;
-      grid-template-rows: 30% 70%;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 1fr;
+  justify-content: center;
   min-width: 237px;
   padding: 0;
 }
 
 .s1 {
-  border-radius: .5rem .5rem 0 0;
-  -ms-grid-row: 1;
-  grid-row: 1 / 1;
+  border-radius: 0.5rem 0.5rem 0 0;
+  grid-row: 1/1;
 }
 
 img {
   border-radius: inherit;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 
 .info {
-  -ms-grid-column: 1;
   grid-column: 1/1;
-  -ms-grid-row: 2;
-  grid-row: 2 / 2;
+  grid-row: 2/2;
   margin: 4rem;
 }
 
 .s2 {
-  font-family: 'Inter';
+  font-family: "Inter";
   margin: 2rem;
   max-width: 100%;
 }
@@ -79,15 +70,15 @@ img {
 
 .s3__stat-1 {
   color: white;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: clamp(1rem, 8vw, 1.5rem);
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .s3__stat-2 {
   color: rgba(255, 255, 255, 0.6);
-  font-family: 'Lexend Deca';
+  font-family: "Lexend Deca";
   font-size: clamp(0.5rem, 4vw, 0.75rem);
   font-weight: 100;
 }
@@ -100,56 +91,54 @@ img {
   body {
     background-color: #090b1a;
   }
+
   .card {
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background-color: #1b1938;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     max-height: 500px;
   }
+
   .s1 {
     background-color: #aa5cdb;
-    border-radius: 0 .5rem .5rem 0;
-    -ms-grid-column: 2;
-    grid-column: 2 / 2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
+    border-radius: 0 0.5rem 0.5rem 0;
+    grid-column: 2/2;
+    grid-row: 1/2;
     margin: 0;
     max-height: inherit;
   }
+
   img {
     border-radius: inherit;
     height: 100%;
     margin: 0;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
+
   .info {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    -ms-grid-row: 1;
-    grid-row: 1 / 1;
+    grid-row: 1/1;
     max-height: inherit;
   }
+
   .s2 {
-    font-family: 'Inter';
+    font-family: "Inter";
   }
+
   .s2__title {
     color: white;
     font-size: 2rem;
     font-weight: 600;
     text-align: left;
   }
+
   .s2__title-emphasis {
     color: #aa5cdb;
   }
+
   .s2__title-subtitle {
     color: rgba(255, 255, 255, 0.75);
     font-size: 1rem;
@@ -157,34 +146,36 @@ img {
     line-height: 2rem;
     text-align: left;
   }
+
   .s3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
+
   .s3__stat {
     list-style: none;
     padding-left: 0;
     text-align: left;
   }
+
   .s3__stat-1 {
     color: white;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
+
   .s3__stat-2 {
     color: rgba(255, 255, 255, 0.6);
-    font-family: 'Lexend Deca';
-    font-size: .75rem;
+    font-family: "Lexend Deca";
+    font-size: 0.75rem;
     font-weight: 100;
   }
+
   .s3__stat-2:not(:last-child) {
     padding-bottom: 3rem;
   }
 }
+
 /*# sourceMappingURL=c2-styles.css.map */
