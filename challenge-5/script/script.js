@@ -35,4 +35,4 @@ function getNewAdvice() {
 button.addEventListener('click', getNewAdvice);
 
 // Loading an alert after 3s.
-window.addEventListener('load', setTimeout(()=>{alert('Click on the dice for a new advice!')}, 3000));
+// window.addEventListener('load', setTimeout(()=>{alert('Click on the dice for a new advice!')}, 3000));

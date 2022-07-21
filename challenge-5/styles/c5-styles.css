@@ -4,13 +4,9 @@ body {
 }
 
 main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   font-family: "Manrope";
-  justify-content: center;
-  margin-top: 6rem;
   position: relative;
+  height: 100vh;
 }
 
 .component {
@@ -23,6 +19,8 @@ main {
   justify-content: center;
   max-width: 500px;
   padding: 0 2rem;
+  margin: auto;
+  margin-top: 13rem;
 }
 
 .advice {
@@ -47,8 +45,7 @@ main {
 }
 
 .advice__divider {
-  bottom: 25%;
-  position: absolute;
+  position: relative;
 }
 
 .accent {
@@ -58,6 +55,7 @@ main {
   display: flex;
   height: 70px;
   justify-content: center;
+  margin: 0 auto;
   margin-top: -35px;
   width: 70px;
 }
@@ -86,6 +84,13 @@ main {
   font-weight: 800;
 }
 
+.code__snippet {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  padding-top: 2rem;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -97,7 +102,12 @@ main {
 @media (max-width: 640px) {
   .component {
     margin: 0 1rem;
+    margin-top: 8rem;
     min-width: 280px;
+  }
+
+  .code__snippet {
+    max-width: 90%;
   }
 }
 @media (min-width: 640px) {
