@@ -58,7 +58,6 @@ main {
   height: 70px;
   justify-content: center;
   margin: auto;
-  margin-top: -35px;
   position: absolute;
   width: 70px;
 }
@@ -96,10 +95,10 @@ main {
 }
 
 .code__snippet {
+  border-radius: 0.5rem;
   display: block;
-  margin: auto;
+  margin: 2rem auto;
   max-width: 70%;
-  padding-top: 2rem;
 }
 
 @keyframes spin {
