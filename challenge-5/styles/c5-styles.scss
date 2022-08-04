@@ -10,10 +10,10 @@ $background: #313a49;
 //Styles
 body {
     background-color: #202632;
+    font-family: 'Manrope';
 }
 
 main {
-    font-family: 'Manrope';
     height: 100vh;
 }
 
@@ -101,6 +101,7 @@ main {
     border-radius: 1rem;
     color: $main-text;
     line-height: 2.5rem;
+    margin: 4rem;
     padding: 2rem 4rem;
 }
 
