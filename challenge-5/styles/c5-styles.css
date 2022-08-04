@@ -5,7 +5,6 @@ body {
 
 main {
   font-family: "Manrope";
-  position: relative;
   height: 100vh;
 }
 
@@ -17,10 +16,11 @@ main {
   flex-direction: column;
   height: 400px;
   justify-content: center;
+  margin: 13rem auto 0;
   max-width: 500px;
   padding: 0 2rem;
-  margin: auto;
-  margin-top: 13rem;
+  position: relative;
+  vertical-align: auto;
 }
 
 .advice {
@@ -34,7 +34,7 @@ main {
   font-size: 12px;
   letter-spacing: 2px;
   position: absolute;
-  top: 10%;
+  top: 13%;
 }
 
 .advice__quote {
@@ -45,18 +45,21 @@ main {
 }
 
 .advice__divider {
-  position: relative;
+  bottom: 15%;
+  position: absolute;
 }
 
 .accent {
   align-items: center;
   background-color: #53ffab;
   border-radius: 50%;
+  bottom: -9%;
   display: flex;
   height: 70px;
   justify-content: center;
-  margin: 0 auto;
+  margin: auto;
   margin-top: -35px;
+  position: absolute;
   width: 70px;
 }
 
@@ -75,13 +78,21 @@ main {
 }
 
 .accent__alert {
-  display: block;
-  padding: 1rem 2rem;
   background-color: #53ffac;
   border-radius: 0.5rem;
-  margin-top: 2rem;
   color: #202632;
+  display: block;
   font-weight: 800;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+
+.code__summary {
+  background-color: #313a49;
+  border-radius: 1rem;
+  color: #cfe3ea;
+  line-height: 2.5rem;
+  padding: 2rem 4rem;
 }
 
 .code__snippet {
@@ -101,9 +112,7 @@ main {
 }
 @media (max-width: 640px) {
   .component {
-    margin: 0 1rem;
-    margin-top: 8rem;
-    min-width: 280px;
+    margin: 13rem 1rem 0;
   }
 
   .code__snippet {
