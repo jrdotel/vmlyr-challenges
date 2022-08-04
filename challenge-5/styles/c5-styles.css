@@ -118,6 +118,10 @@ main {
   .code__snippet {
     max-width: 90%;
   }
+
+  .code__summary {
+    display: none;
+  }
 }
 @media (min-width: 640px) {
   .component {
