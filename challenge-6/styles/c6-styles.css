@@ -1,0 +1,56 @@
+/* Fonts */
+@import url('');
+
+
+/* Variables */
+:root {
+    --primary-color: #ec755d;
+    --primary-active: #ff9b87;
+    --secondary-color: #76b5bc;
+    --secondary-active: #b4dfe5;
+    --primary-background: #f7e9dc;
+    --secondary-background: #fffcf7;
+    --text-accent: #372715;
+    --text-white: #fffdf7;
+    --text-gray: #b9b2ac;
+}
+
+
+/* Styles */
+body {
+    background-color: var(--primary-background);
+}
+
+.component {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    row-gap: 2rem;
+    width: 400px;
+    margin: 20% auto 20%;
+    height: 600px;
+}
+
+.balance, .info {
+    border-radius: 1rem;
+    display: block;
+}
+
+.balance {
+    background-color: var(--primary-color);
+    grid-row-end: 2;
+}
+
+.info {
+    background-color: var(--secondary-background);
+    grid-row-start: 2;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    
+}
+
+/* Desktop */
+@media (min-width: 640px) {
+
+}
