@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
 
 /* Variables */
@@ -24,15 +24,39 @@ body {
 .component {
     display: grid;
     grid-template-rows: 1fr 4fr;
-    row-gap: 2rem;
-    width: 400px;
-    margin: 20% auto 20%;
-    height: 600px;
+    height: 33rem;    
+    margin: 8rem auto 8rem;
+    row-gap: 1rem;
+    width: min(90%, 500px);
+    font-family: 'DM Sans';
+}
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: var(--text-white);
+}
+
+.balance__amount dt {
+    font-size: .8rem;
+}
+
+.balance__amount dd {
+    margin-left: 0;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.balance img {
+    position: relative;
+    height: 40%;
 }
 
 .balance, .info {
     border-radius: 1rem;
-    display: block;
 }
 
 .balance {
@@ -47,10 +71,8 @@ body {
 
 /* Mobile */
 @media (max-width: 640px) {
-    
 }
 
 /* Desktop */
 @media (min-width: 640px) {
-
 }
