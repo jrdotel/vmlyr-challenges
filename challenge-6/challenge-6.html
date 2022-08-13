@@ -8,6 +8,26 @@
     <title>Challenge 6</title>
 </head>
 <body>
+    <h1 class="form__title">Budget Calculator</h1>
+    <form action=".component" method="GET">
+       <p class="form_instructions">Please enter daily spending to calculate your total expenses</p> 
+       <label for="monday">Monday</label>
+           <input type="text" name="monday" id="monday" placeholder="00.00">
+       <label for="tuesday">Tuesday</label>
+           <input type="text" name="teusday" id="tuesday" placeholder="00.00">
+       <label for="wednesday">Wednesday</label>
+           <input type="text" name="wednesday" id="wednesday" placeholder="00.00">
+       <label for="thursday">Thurday</label>
+           <input type="text" name="thursday" id="thursday" placeholder="00.00">
+       <label for="friday">Friday</label>
+           <input type="text" name="friday" id="friday" placeholder="00.00">
+       <label for="saturday">Saturday</label>
+           <input type="text" name="saturday" id="saturday" placeholder="00.00">
+       <label for="sunday">Sunday</label>
+           <input type="text" name="sunday" id="sunday" placeholder="00.00">
+       <button type="reset" class="reset">Reset</button>
+       <button type="submit" class="submit">Submit</button>
+    </form>
     <main class="component">
         <div class="balance">
             <dl class="balance__amount">
@@ -17,7 +37,34 @@
             <img src="./images/logo.svg" aria-hidden="true">
         </div>
         <div class="info">
-            
+            <header class="info__summary">Spending - Last 7 days</header>
+            <dl class="info__graph">
+                <dt class="info__graph--day-1"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-2"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-3"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-4"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-5"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-6"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-7"></dt>
+                <dd class="info__graph--bar"></dd>
+            </dl>
+            <hr class="info__break">
+            <footer class="info__calc">
+                <dl class="info__calc--amount">
+                    <dt>Total this month</dt>
+                    <dd>$478.33</dd>
+                </dl>
+                <dl class="info__calc--percentage">
+                    <dd>+2.4%</dd>
+                    <dt>from last month</dt>
+                </dl>
+            </footer>
         </div>
     </main>
     

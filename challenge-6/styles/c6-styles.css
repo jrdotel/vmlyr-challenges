@@ -19,6 +19,23 @@
 /* Styles */
 body {
     background-color: var(--primary-background);
+    font-family: 'DM Sans';
+}
+
+form {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form button {
+    width: 15rem;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-family: "DM Sans";
+    font-size: 1.5rem;
 }
 
 .component {
@@ -28,7 +45,6 @@ body {
     margin: 8rem auto 8rem;
     row-gap: 1rem;
     width: min(90%, 500px);
-    font-family: 'DM Sans';
 }
 
 .balance {
@@ -67,6 +83,47 @@ body {
 .info {
     background-color: var(--secondary-background);
     grid-row-start: 2;
+    padding: 2rem;
+}
+
+.info__summary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-accent);
+}
+
+.info__graph {
+    position:relative;
+    height: 50%;
+}
+
+.info__calc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__calc dt {
+    font-size: .8rem;
+    opacity: 50%;
+}
+
+.info__calc dd {
+    margin-left: 0;
+    color: var(--text-accent);
+}
+
+.info__calc--amount dd {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.info__calc--percentage {
+    text-align: end;
+    vertical-align: bottom;
+}
+.info__calc--percentage dd {
+    font-weight: 700;
+    font-size: .9rem;
 }
 
 /* Mobile */
