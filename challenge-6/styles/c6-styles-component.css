@@ -22,6 +22,12 @@ body {
     font-family: 'DM Sans';
 }
 
+h1 {
+    border-left: 1rem solid var(--primary-color);
+    padding-left: 1rem;
+    margin-left: 2rem;
+}
+
 .component {
     display: grid;
     grid-template-rows: 1fr 4fr;
@@ -105,9 +111,63 @@ body {
     text-align: end;
     vertical-align: bottom;
 }
+
 .info__calc--percentage dd {
     font-weight: 700;
     font-size: .9rem;
+}
+
+button {
+    font-size: 1.5em;
+    display: block;
+    margin: -5rem auto 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--text-gray);
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+/* button:hover {
+    opacity: 60%;
+} */
+
+button:active {
+    transform: scale(.9);
+    transition: 0.5s;
+}
+
+/* 
+The following button animation was copied from W3 Schools 
+
+(https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1) 
+*/
+
+button i {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button i:after {
+  content: 'Home';
+  font-family: "DM Sans";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: .5s;
+}
+
+button:hover i {
+  padding-right: 4.5rem;
+}
+
+button:hover i:after {
+  opacity: 1;
+  right: 0;
+  top: 0;
 }
 
 /* Mobile */
