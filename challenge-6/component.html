@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/c6-styles-component.css">
+    <title>Challenge 6</title>
+</head>
+<body>
+    <h1 class="form__title">Budget Calculator</h1>
+    <main class="component">
+        <div class="balance">
+            <dl class="balance__amount">
+                <dt>My balance</dt>
+                <dd>$921.48</dd>
+            </dl>
+            <img src="./images/logo.svg" aria-hidden="true">
+        </div>
+        <div class="info">
+            <header class="info__summary">Spending - Last 7 days</header>
+            <dl class="info__graph">
+                <dt class="info__graph--day-1"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-2"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-3"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-4"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-5"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-6"></dt>
+                <dd class="info__graph--bar"></dd>
+                <dt class="info__graph--day-7"></dt>
+                <dd class="info__graph--bar"></dd>
+            </dl>
+            <hr class="info__break">
+            <footer class="info__calc">
+                <dl class="info__calc--amount">
+                    <dt>Total this month</dt>
+                    <dd>$478.33</dd>
+                </dl>
+                <dl class="info__calc--percentage">
+                    <dd>+2.4%</dd>
+                    <dt>from last month</dt>
+                </dl>
+            </footer>
+        </div>
+    </main>
+
+    <button onclick="window.location.href = 'index.html'">
+        <i class="fa-solid fa-house"></i>
+    </button>
+    
+    <script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>

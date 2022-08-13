@@ -1,0 +1,119 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+
+/* Variables */
+:root {
+    --primary-color: #ec755d;
+    --primary-active: #ff9b87;
+    --secondary-color: #76b5bc;
+    --secondary-active: #b4dfe5;
+    --primary-background: #f7e9dc;
+    --secondary-background: #fffcf7;
+    --text-accent: #372715;
+    --text-white: #fffdf7;
+    --text-gray: #b9b2ac;
+}
+
+
+/* Styles */
+body {
+    background-color: var(--primary-background);
+    font-family: 'DM Sans';
+}
+
+.component {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 33rem;    
+    margin: 8rem auto 8rem;
+    row-gap: 1rem;
+    width: min(90%, 500px);
+}
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: var(--text-white);
+}
+
+.balance__amount dt {
+    font-size: .8rem;
+}
+
+.balance__amount dd {
+    margin-left: 0;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.balance img {
+    position: relative;
+    height: 40%;
+}
+
+.balance, .info {
+    border-radius: 1rem;
+}
+
+.balance {
+    background-color: var(--primary-color);
+    grid-row-end: 2;
+}
+
+.info {
+    background-color: var(--secondary-background);
+    grid-row-start: 2;
+    padding: 2rem;
+}
+
+.info__summary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-accent);
+}
+
+.info__graph {
+    position:relative;
+    height: 50%;
+}
+
+.info__calc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__calc dt {
+    font-size: .8rem;
+    opacity: 50%;
+}
+
+.info__calc dd {
+    margin-left: 0;
+    color: var(--text-accent);
+}
+
+.info__calc--amount dd {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.info__calc--percentage {
+    text-align: end;
+    vertical-align: bottom;
+}
+.info__calc--percentage dd {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+}
+
+/* Desktop */
+@media (min-width: 640px) {
+}

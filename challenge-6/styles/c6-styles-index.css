@@ -1,0 +1,63 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+
+/* Variables */
+:root {
+    --primary-color: #ec755d;
+    --primary-active: #ff9b87;
+    --secondary-color: #76b5bc;
+    --secondary-active: #b4dfe5;
+    --primary-background: #f7e9dc;
+    --secondary-background: #fffcf7;
+    --text-accent: #372715;
+    --text-white: #fffdf7;
+    --text-gray: #b9b2ac;
+}
+
+
+/* Styles */
+body {
+    background-color: var(--primary-background);
+    font-family: 'DM Sans';
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: min(70%, 400px);
+    margin: auto;
+    background-color: var(--secondary-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;    
+}
+
+form label {
+    font-size: 1.2rem;
+    margin: .5rem 0 .2rem;
+}
+
+form input {
+    height: 2rem;
+    border-radius: .5rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+}
+
+form button {
+    width: 15rem;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-family: "DM Sans";
+    font-size: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+}
+
+/* Desktop */
+@media (min-width: 640px) {
+}
