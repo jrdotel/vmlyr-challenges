@@ -32,11 +32,16 @@ form {
     display: flex;
     flex-direction: column;
     width: min(70%, 400px);
-    margin: auto;
+    margin: 8rem auto 2rem;
     background-color: var(--secondary-background);
     padding: 2rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;    
+}
+
+.form__instructions {
+    border-left: .5rem solid var(--primary-active);
+    padding-left: 1rem;
+    margin-top: 0;
 }
 
 form label {
@@ -47,14 +52,48 @@ form label {
 form input {
     height: 2rem;
     border-radius: .5rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     font-size: 1.5rem;
     border: none;
     background: none;
+    width: 8rem;
 }
 
-form label, form input {
-    padding-left: 4rem;
+.form__inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__left {
+    padding-left: 2rem;
+}
+
+.form__left, .form__right {
+    position: relative;
+    width: 40%;
+}
+
+.form__right--balance {
+    margin: 2.5rem 0 0 -2rem;
+    display: block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-active);
+    border-radius: .5rem;
+    width: fit-content;
+
+}
+
+.form__right--balance label {
+    font-size: 1rem;
+    color: var(--text-accent);
+    border-left: .3rem solid var(--text-white);
+    padding-left: .5rem;
+    margin: 0 0 2rem -1rem;
+}
+
+.form__right--balance input {
+    font-size: 2rem;
+    color: var(--text-accent);
 }
 
 /* form input:focus + label {
