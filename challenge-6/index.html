@@ -8,29 +8,41 @@
     <title>Challenge 6</title>
 </head>
 <body>
-    <h1 class="form__title">Budget Calculator</h1>
+    <h1 class="form__title">Balance Calculator</h1>
     <form action="component.html" method="GET">
-       <p class="form__instructions">Please enter daily spending to calculate your total expenses</p> 
-       <label for="monday">Monday</label>
-           <input type="number" name="monday" id="monday" placeholder="00.00">
-       <label for="tuesday">Tuesday</label>
-           <input type="number" name="teusday" id="tuesday" placeholder="00.00">
-       <label for="wednesday">Wednesday</label>
-           <input type="number" name="wednesday" id="wednesday" placeholder="00.00">
-       <label for="thursday">Thurday</label>
-           <input type="number" name="thursday" id="thursday" placeholder="00.00">
-       <label for="friday">Friday</label>
-           <input type="number" name="friday" id="friday" placeholder="00.00">
-       <label for="saturday">Saturday</label>
-           <input type="number" name="saturday" id="saturday" placeholder="00.00">
-       <label for="sunday">Sunday</label>
-           <input type="number" name="sunday" id="sunday" placeholder="00.00">
-        <div class="form__buttons">
-            <button type="reset" class="reset">Reset</button>
-            <button type="submit" class="submit">Submit</button>
+       <p class="form__instructions">Please enter daily spending and current balance to calculate your total expenses</p>
+       <div class="form__inputs">
+           <div class="form__left">
+               <label for="monday">Monday</label>
+               <input type="number" name="monday" id="monday" placeholder="00.00">
+               <label for="tuesday">Tuesday</label>
+               <input type="number" name="teusday" id="tuesday" placeholder="00.00">
+               <label for="wednesday">Wednesday</label>
+               <input type="number" name="wednesday" id="wednesday" placeholder="00.00">
+               <label for="thursday">Thurday</label>
+               <input type="number" name="thursday" id="thursday" placeholder="00.00">
+               <label for="friday">Friday</label>
+               <input type="number" name="friday" id="friday" placeholder="00.00">
+            </div>
+            <div class="form__right">
+                <div class="form__right--weekend">
+                    <label for="saturday">Saturday</label>
+                    <input type="number" name="saturday" id="saturday" placeholder="00.00">
+                    <label for="sunday">Sunday</label>
+                    <input type="number" name="sunday" id="sunday" placeholder="00.00">
+                </div>
+                <div class="form__right--balance">
+                    <label for="sunday">Current Balance</label>
+                    <input type="number" name="current" id="current" placeholder="00.00">
+                </div>
+            </div>
+        </div>
+            <div class="form__buttons">
+                <button type="reset" class="reset">Reset</button>
+                <button type="submit" class="submit">Submit</button>
         </div>
     </form>
     
-    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javasscript" src="script/script.js"></script>
 </body>
 </html>
