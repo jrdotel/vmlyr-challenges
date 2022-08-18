@@ -44,7 +44,7 @@ form {
     margin-top: 0;
 }
 
-form label {
+form label {s
     font-size: 1.2rem;
     margin: .5rem 0 .2rem;
 }
@@ -79,15 +79,12 @@ form input {
     padding: 1rem 2rem;
     background-color: var(--secondary-active);
     border-radius: .5rem;
-    width: fit-content;
-
+    width: 60%;
 }
 
 .form__right--balance label {
     font-size: 1rem;
     color: var(--text-accent);
-    border-left: .3rem solid var(--text-white);
-    padding-left: .5rem;
     margin: 0 0 2rem -1rem;
 }
 
@@ -128,6 +125,7 @@ form input {
 }
 
 form button:hover {
+    transition: .2s ease;
     opacity: 60%;
 }
 
