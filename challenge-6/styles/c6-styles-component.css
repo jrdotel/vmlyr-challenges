@@ -85,6 +85,8 @@ h1 {
 .info__graph {
     position:relative;
     height: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .info__calc {
