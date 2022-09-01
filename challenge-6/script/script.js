@@ -13,8 +13,11 @@ This program collects all for the values of the form and performs the following 
 
     -Create and set bar graph heights, and add an accent color to the highest expense day.
 */
-
+   
 // Variables.
+const balanceTotal = document.querySelector('#balance_total');
+const percent = document.querySelector('#percent_number');
+const thisMonth = document.querySelector('#current_balance');
 let dailyExpense = new Object;
 let highestDay = ["", 0];
 let total = 0;
@@ -56,12 +59,30 @@ for (e in dailyExpense) {
 // }
 
 // Get the percent difference from last month.
-let currentBalance = dailyExpense['current']['value'];
+let currentBalance = Number(dailyExpense.current.value);
 percentChange = ((total/currentBalance)*100).toFixed(1);
 
 
-// Push data to html.
-const percent = document.querySelector('#percent_number');
+/*
+
+Push data to html.
+
+*/
+// TODO: Fix single decimal edgecase.
+// // Clean up data. Function used from: http://jsfiddle.net/jhKuk/159/
+// function addZeroes(num) {
+//     var value = Number(num);
+//     var res = num.split(".");
+//     if(res.length == 1 || (res[1].length < 3)) {
+//         value = value.toFixed(2);
+//     }
+//     return value
+// }
+
+let userTotal = ((currentBalance+total)*100/100).toFixed(2);
+balanceTotal.innerHTML = '$' + userTotal;
+percent.innerHTML = ((percentChange >= 0) ? '+' : '-') + percentChange + '%';
+thisMonth.innerHTML = '$' + total;
 
 
 
@@ -70,3 +91,4 @@ console.log(dailyExpense);
 console.log(total);
 console.log(highestDay);
 console.log(percentChange);
+console.log(userTotal);
