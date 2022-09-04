@@ -1,5 +1,7 @@
 /*
-Expense Calulator - v.1 (2022)
+**********************************************************************
+**********************************************************************
+Expense Calculator - v.1 (2022)
 
 The following is a simple program to calculate the form's data and gather enough info to create a very simple bar graph. 
 
@@ -12,144 +14,138 @@ This program collects all for the values of the form and performs the following 
     -Sets percentage change based from current balance and sum of all daily expenses.
 
     -Create and set bar graph heights, and add an accent color to the highest expense day(s).
+**********************************************************************
+**********************************************************************
 */
-   
-// Variables.
-const balanceTotal = document.querySelector('#balance_total');
-const percent = document.querySelector('#percent_number');
-const thisMonth = document.querySelector('#current_balance');
-const mon = document.querySelector('#monday').style;
-const tue = document.querySelector('#tuesday').style;
-const wed = document.querySelector('#wednesday').style;
-const thu = document.querySelector('#thursday').style;
-const fri = document.querySelector('#friday').style;
-const sat = document.querySelector('#saturday').style;
-const sun = document.querySelector('#sunday').style;
-let dailyExpense = new Object;
-let highestDay = ['', 0];
-let total = 0;
-let percentChange = 0;
 
-// Parse values for each field in form.
+/*
+***********
+Variables.
+***********
+*/
+
+const balance_total = document.querySelector('#balance_total');
+const percent = document.querySelector('#percent_number');
+const this_month = document.querySelector('#current_balance');
+let daily_expense = new Object;
+let highest_day = ['', 0];
+let percent_change = 0;
+let primary_color = '#ec755d';
+let secondary_color = '#76b5bc'
+let total = 0;
+
+/*
+************************************
+Parse values for each field in form.
+************************************
+*/
+
 new URLSearchParams(window.location.search).forEach((value, name) => {
     if (name !== 'current') {
-        dailyExpense[name] = {
+        daily_expense[name] = {
            'bar_value': Number(value),
            'bar_height': '0px',
-           'bar_color': '#ec755d' 
+           'bar_color': primary_color 
         };
     }
     else {
-        dailyExpense[name] = {
+        daily_expense[name] = {
             'bar_value': Number(value),
          };
     }
 });
 
 /*
+********************************************************************
 Find the highest expense day and push each value to expesenses array except for current balance.
 
-Calculate daily bar graph heights based on the highestDay.
+Calculate daily bar graph heights based on the highest_day.
+********************************************************************
 */
-for (e in dailyExpense) {
-    if (e !== 'current') {
-        total += dailyExpense[e]['bar_value'];
 
-        if (highestDay[1] <= dailyExpense[e]['bar_value']) {    
-            if (highestDay[0] === '') {
-                highestDay[0] = e;
-                highestDay[1] = dailyExpense[e]['bar_value'];
-                dailyExpense[e]['bar_height'] = '120px';
-                dailyExpense[e]['bar_color'] = '#76b5bc';
+// Loop through dail_expense and set values for highest_day bar_height, and bar_color.
+for (e in daily_expense) {
+    if (e !== 'current') {
+        total += daily_expense[e]['bar_value'];
+
+        if (highest_day[1] <= daily_expense[e]['bar_value']) {  
+            // Check if highest_day is initial value.  
+            if (highest_day[0] === '') {
+                highest_day[0] = e;
+                highest_day[1] = daily_expense[e]['bar_value'];
+                daily_expense[e]['bar_height'] = '120px';
+                daily_expense[e]['bar_color'] = secondary_color;
             }
             else {
                 // Reset bar_height if needed.
-                (highestDay[1] === dailyExpense[e]['bar_value']) ?
-                dailyExpense[highestDay[0]]['bar_height'] = '120px' :
-                dailyExpense[highestDay[0]]['bar_height'] = '0px';
+                (highest_day[1] === daily_expense[e]['bar_value']) ?
+                daily_expense[highest_day[0]]['bar_height'] = '120px' :
+                daily_expense[highest_day[0]]['bar_height'] = '0px';
                 // Reset bar_color if needed.
-                (highestDay[1] === dailyExpense[e]['bar_value']) ?
-                dailyExpense[highestDay[0]]['bar_color'] = '#76b5bc' :
-                dailyExpense[highestDay[0]]['bar_color'] = '#ec755d';
-                // Set new highestDay values.
-                highestDay[0] = e;
-                highestDay[1] = dailyExpense[e]['bar_value'];
-                dailyExpense[e]['bar_height'] = '120px';
-                dailyExpense[e]['bar_color'] = '#76b5bc';
+                (highest_day[1] === daily_expense[e]['bar_value']) ?
+                daily_expense[highest_day[0]]['bar_color'] = secondary_color :
+                daily_expense[highest_day[0]]['bar_color'] = primary_color;
+                // Set new highest_day values.
+                highest_day[0] = e;
+                highest_day[1] = daily_expense[e]['bar_value'];
+                daily_expense[e]['bar_height'] = '120px';
+                daily_expense[e]['bar_color'] = secondary_color;
             }
         }
     }
 }
 
-for (e in dailyExpense) {
-    if (e !== highestDay[0] && e !== 'current') {
-        let day = dailyExpense[e]['bar_value'];
-        let size = ((day*100)/highestDay[1]).toFixed(1);
-        console.log(size)
+for (e in daily_expense) {
+    if (e !== highest_day[0] && e !== 'current') {
+        let day = daily_expense[e]['bar_value'];
+        let size = ((day*100)/highest_day[1]).toFixed(1);
         let pixel = ((size*120)/100).toFixed(2);
-        console.log(pixel)
-        dailyExpense[e]['bar_height'] = `${pixel}px`;
+        daily_expense[e]['bar_height'] = `${pixel}px`;
     }
 }
 
 // Get the percent difference from last month.
-let currentBalance = dailyExpense.current.value;
-percentChange = ((total/currentBalance)*100).toFixed(1);
+let current_balance = daily_expense.current.bar_value;
+percent_change = ((total/current_balance)*100).toFixed(1);
 
 
 /*
-
+******************
 Push data to html.
-
+******************
 */
-// TODO: Fix single decimal edgecase.
-// // Clean up data. Function used from: http://jsfiddle.net/jhKuk/159/
-// function addZeroes(num) {
-//     var value = Number(num);
-//     var res = num.split(".");
-//     if(res.length == 1 || (res[1].length < 3)) {
-//         value = value.toFixed(2);
-//     }
-//     return value
-// }
 
-let userTotal = ((currentBalance+total)*100/100).toFixed(2);
-balanceTotal.innerHTML = '$' + userTotal;
-percent.innerHTML = ((percentChange >= 0) ? '+' : '-') + percentChange + '%';
-thisMonth.innerHTML = '$' + total;
+// Clean and push total.
+let user_total = ((current_balance+total)*100/100).toFixed(2);
+balance_total.innerHTML = '$' + user_total;
+// Clean and push percentage.
+percent.innerHTML = ((percent_change >= 0) ? '+' : '-') + percent_change + '%';
+// Clean and push current total.
+total = ((total*100)/100).toFixed(2);
+this_month.innerHTML = '$' + total;
 
 /*
-
+***************************************
 Push px sizes and color for bar graphs.
-
+***************************************
 */
-// Monday.
-mon.setProperty('--height', `${dailyExpense['monday']['bar_height']}`);
-mon.setProperty('--color', `${dailyExpense['monday']['bar_color']}`);
-// Tuesday.
-tue.setProperty('--height', `${dailyExpense['tuesday']['bar_height']}`);
-tue.setProperty('--color', `${dailyExpense['tuesday']['bar_color']}`);
-// Wednesday.
-wed.setProperty('--height', `${dailyExpense['wednesday']['bar_height']}`);
-wed.setProperty('--color', `${dailyExpense['wednesday']['bar_color']}`);
-// Thursday.
-thu.setProperty('--height', `${dailyExpense['thursday']['bar_height']}`);
-thu.setProperty('--color', `${dailyExpense['thursday']['bar_color']}`);
-// Friday.
-fri.setProperty('--height', `${dailyExpense['friday']['bar_height']}`);
-fri.setProperty('--color', `${dailyExpense['friday']['bar_color']}`);
-// Saturday.
-sat.setProperty('--height', `${dailyExpense['saturday']['bar_height']}`);
-sat.setProperty('--color', `${dailyExpense['saturday']['bar_color']}`);
-// Sunday.
-sun.setProperty('--height', `${dailyExpense['sunday']['bar_height']}`);
-sun.setProperty('--color', `${dailyExpense['sunday']['bar_color']}`);
 
+// Loop through whole_week, and set daily_expense bar_height and bar_color if needed
+const whole_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+for (day in whole_week) {
+    let style = document.querySelector('#'+`${whole_week[day]}`).style;
+    style.setProperty('--height', `${daily_expense[`${whole_week[day]}`]['bar_height']}`);
+    style.setProperty('--color', `${daily_expense[`${whole_week[day]}`]['bar_color']}`);
+}
 
+/*
+****************************************
+Uncomment necessary lines for debugging.
+****************************************
+*/
 
-// Uncomment necessary lines for debugging.
-console.log(dailyExpense);    
-console.log(total);
-console.log(highestDay);
-console.log(percentChange);
-console.log(userTotal);
+// console.log(daily_expense);    
+// console.log(total);
+// console.log(highest_day);
+// console.log(percent_change);
+// console.log(user_total);
