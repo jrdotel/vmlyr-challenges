@@ -56,11 +56,11 @@ new URLSearchParams(window.location.search).forEach((value, name) => {
 });
 
 /*
-********************************************************************
+************************************************************************************************
 Find the highest expense day and push each value to expesenses array except for current balance.
 
 Calculate daily bar graph heights based on the highest_day.
-********************************************************************
+************************************************************************************************
 */
 
 // Loop through dail_expense and set values for highest_day bar_height, and bar_color.
