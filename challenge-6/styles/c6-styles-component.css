@@ -73,20 +73,119 @@ h1 {
 .info {
     background-color: var(--secondary-background);
     grid-row-start: 2;
-    padding: 2rem;
+    padding: 1.2rem;
 }
 
 .info__summary {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-accent);
 }
 
 .info__graph {
-    position:relative;
+    position: relative;
     height: 50%;
+    border: 2px solid hotpink;
+}
+
+.info__graph-bars {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+}
+
+.info__graph-bars dd {
+    margin-left: 0;
+}
+
+.info__graph-bars span {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 
+@NOTE: Had to add this for some reason 
+*/
+.info__graph-bars dd::before {
+    content: "";
+    display: block;
+    width: 2rem;
+}
+
+.info__graph-bars #monday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars #tuesday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars #wednesday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars #thursday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars #friday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars #saturday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars #sunday::before {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    width: 2rem;
+    height: var(--height);
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.info__graph-bars span {
+    font-size: .8rem;
+    /* opacity: 50%; */
 }
 
 .info__calc {
@@ -111,7 +210,6 @@ h1 {
 
 .info__calc--percentage {
     text-align: end;
-    vertical-align: bottom;
 }
 
 .info__calc--percentage dd {
