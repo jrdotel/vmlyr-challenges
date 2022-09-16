@@ -91,14 +91,24 @@ h1 {
 .info__graph-bars {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
 }
 
 .info__graph-bars dd {
     margin-left: 0;
 }
 
-.info__graph-bars span {
+.info__graph-bars-info {
+    /* display: var(--display); */
+    display: block;
+    background-color: var(--text-accent);
+    border-radius: .2rem;
+    padding: .3rem;
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.info__graph-bars .info__graph-bars-day {
     text-align: center;
     position: absolute;
     bottom: 0;
@@ -111,6 +121,11 @@ h1 {
     content: "";
     display: block;
     width: 2rem;
+}
+
+.info__graph-bars .info__graph-bars-day:hover::before {
+    opacity: 50%;
+    cursor: pointer;
 }
 
 .info__graph-bars #monday::before {
@@ -185,7 +200,6 @@ h1 {
 
 .info__graph-bars span {
     font-size: .8rem;
-    /* opacity: 50%; */
 }
 
 .info__calc {
@@ -228,10 +242,6 @@ button {
     color: var(--text-white);
     cursor: pointer;
 }
-
-/* button:hover {
-    opacity: 60%;
-} */
 
 button:active {
     transform: scale(.9);
